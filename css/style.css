@@ -318,6 +318,41 @@ ul{
 }
 
 /* ==========================================
+    下層ページ共通パーツ (page)
+========================================== */
+/* --- メインビジュアル ---*/
+.page-mv {
+    padding: 80px 0;                    /* 上下の余白（写真を魅せるため広め） */
+    text-align: center;
+    background-size: cover;             /* 画像をエリア全体に広げる */
+    background-position: center;        /* 画像の中央を表示 */
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;                         /* フィルターの上に文字を載せるため */
+}
+
+/* タイトルのスタイル（黒背景に映える白系） */
+.page-mv__title {
+    display: flex;
+    flex-direction: column;    /* 英語と日本語を縦並びにする */
+    align-items: center;
+    gap: 8px;                  /* 英和の間の余白 */
+}
+
+.page-mv__title .en {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a8e6cf;            /* ★ここをお好みのメインカラーに変更してください（例：青緑、明るいグレーなど） */
+    letter-spacing: 0.15em;    /* 文字の間隔を広げてオシャレに */
+}
+
+.page-mv__title .ja {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;            /* 白文字で見やすく */
+}
+
+/* ==========================================
     <TOP>メインビジュアル (mv)
 ========================================== */
 .top-mv {
@@ -626,4 +661,14 @@ ul{
         height: 100%;
         min-height: 360px;              /* 左側の表の高さに合わせてしっかり表示 */
     }
+}
+
+/* ==========================================
+    <CONCEPT>メインビジュアル (mv)
+========================================== */
+.concept-mv {
+    /* 黒の半透明（50%）フィルターと画像の指定 */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/concept-header.jpg"); /* 使用する画像のパス */
 }
