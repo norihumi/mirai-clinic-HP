@@ -1135,3 +1135,13 @@ ul{
         object-fit : cover;
     }
 }
+
+/* ==========================================
+    <SERVICE>メインビジュアル (mv)
+========================================== */
+.service-mv {
+    background-image:
+        /* 黒の半透明（50%）フィルターと画像の指定 */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/service-header.jpg');
+}
