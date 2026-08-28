@@ -149,6 +149,68 @@ ul{
     }
 }
 
+/* --- 各セクション --- */
+/* 外箱 */
+.section {
+    padding: 60px 0;                  /* 上下の共通余白 */
+}
+
+/* 内箱 */
+.inner {
+    max-width: 1100px;               /* サイト全体の共通幅 */
+    margin: 0 auto;                  /* 左右中央寄せ */
+    padding: 0 20px;                 /* スマホ時の見切れ防止余白 */
+}
+
+/* タイトル */
+.title {
+    text-align: center;              /* タイトルを中央寄せ */
+    margin-bottom: 40px;
+}
+
+.title__main {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0284c7;                  /* クリニックらしい爽やかな青 */
+    letter-spacing: 0.1em;
+}
+
+.title__sub {
+    font-size: 0.875rem;
+    color: #666666;
+    margin-top: 4px;
+}
+
+/* --- ボタン (btn) --- */
+/* ボタンを中央寄せるための枠組み */
+.btn__wrapper {
+    text-align: center;
+    margin-top: 30px; /* 上のコンテンツとの余白 */
+}
+
+/* ボタン本体 */
+.btn {
+    display: inline-block;
+    min-width: 200px;
+    padding: 14px 30px;
+    background-color: #333333; /* クリニックのメインカラーに合わせて調整OK */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;       /* 角を丸くして優しさを出す */
+    transition: all 0.3s ease;  /* ホバー時の動きを滑らかに */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* マウスを載せた時（ホバー時）の演出 */
+.btn:hover {
+    background-color: #555555;
+    transform: translateY(-2px); /* 少し上に浮き上がる */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
 /* ==========================================
     <TOP>メインビジュアル (mv)
 ========================================== */
@@ -197,5 +259,51 @@ ul{
 
     .top-mv__text {
         font-size: 1.125rem;
+    }
+}
+
+/* ==========================================
+    <TOP>コンセプト (concept)
+========================================== */
+.top-concept__content {
+    display: flex;
+    flex-direction: column;          /* スマホでは縦並び */
+    gap: 30px;                       /* 画像とテキストの間の隙間 */
+}
+
+.top-concept__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;              /* 角を少し丸めて柔らかい印象に */
+}
+
+.top-concept__catch {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #333333;
+}
+
+.top-concept__text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* PC向けスタイル（768px以上） */
+@media (min-width: 768px) {
+    .top-content {
+        padding: 100px 0;              /* PCでは上下余白を広げる */
+    }
+
+    .top-concept__content {
+        flex-direction: row;           /* 横並び（2列）に切り替え */
+        align-items: center;           /* 左右の要素を上下中央で揃える */
+    }
+
+    .top-concept__img,
+    .top-concept__textbox {
+        width: 50%;                    /* 左右で50%ずつ分け合う */
     }
 }
