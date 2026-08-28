@@ -1019,3 +1019,119 @@ ul{
         width: 100%;
     }
 }
+
+/* ==========================================
+    <CONCEPT>スタッフ紹介 (staff)
+========================================== */
+.concept-staff {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.concept-staff__head {
+    margin-bottom: 48px;
+}
+
+/* 画像と文章を横並び（Flexbox） */
+.concept-staff__box {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* 画像エリア */
+.concept-staff__img_wrapper {
+    width: 300px;
+    flex-shrink: 0; /* 画像幅が潰れるのを防ぐ */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.concept-staff__img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+/* 本文エリア */
+.concept-staff__body {
+    flex: 1;
+}
+
+.concept-staff__post {
+    font-size: 14px;
+    font-weight: bold;
+    color: #008080;
+    margin-bottom: 4px;
+}
+
+.concept-staff__name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.concept-staff__ruby {
+    font-size: 13px;
+    color: #888888;
+    font-weight: normal;
+}
+
+.concept-staff__message {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 24px;
+}
+
+/* 略歴エリア */
+.concept-staff__history {
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+.concept-staff__history_title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.concept-staff__history_item {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 6px;
+}
+
+.concept-staff__history_item dt {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* レスポンシブ（スマホ対応） */
+@media (max-width: 768px) {
+    .concept-staff__box {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .concept-staff__img_wrapper {
+        width: 100%;
+    }
+
+    .concept-staff__img {
+        height: auto;
+        aspect-ratio : 4/3;
+        object-fit : cover;
+    }
+}
