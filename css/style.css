@@ -211,6 +211,93 @@ ul{
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* --- お問い合わせ (cta) --- */
+.cta {
+
+    /* 明るい水色背景で目立たせる */
+    background-color: #f0f9ff;
+    text-align: center;
+}
+
+.cta__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0284c7;
+    margin-bottom: 12px;
+}
+
+.cta__text {
+    font-size: 0.95rem;
+    color: #333333;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.cta__buttons {
+    display: flex;
+    flex-direction: column;             /* スマホでは縦並び */
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    /* 丸みのあるボタン */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.cta__btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);         /* ホバー時に少し浮く演出 */
+}
+
+.cta__btn_tel {
+    background-color: #ffffff;
+    color: #0284c7;
+    border: 2px solid #0284c7;
+}
+
+.cta__btn_label {
+    font-size: 0.8rem;
+}
+
+.cta__btn_num {
+    font-size: 1.3rem;
+    font-family: Arial, sans-serif;
+}
+
+.cta__btn_web {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 1.03rem;
+    flex-direction: row;
+}
+
+/* PC向けスタイル（768px以上） */
+@media (min-width: 768px) {
+    .cta__title {
+        font-size: 1.8rem;
+    }
+
+    .cta__buttons {
+        /* PCではボタンを横並びに */
+        flex-direction: row;
+    }
+
+    .cta__btn {
+        width: 50%;
+    }
+}
+
 /* ==========================================
     <TOP>メインビジュアル (mv)
 ========================================== */
