@@ -434,3 +434,90 @@ ul{
         font-size: 1rem;
     }
 }
+
+/* ==========================================
+    <TOP>アクセス・診療時間 (access)
+========================================== */
+.top-access__content {
+    display: flex;
+    flex-direction: column;           /* スマホは縦並び */
+    gap: 40px;
+}
+
+.top-access__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0284c7;
+    margin-bottom: 8px;
+}
+
+.top-access__address,
+.top-access__tel {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+/* 診療時間表 */
+.top-access__table {
+    width: 100%;
+    border-collapse: collapse;        /* 枠線の重なりを解消 */
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.top-access__table th,
+.top-access__table td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 4px;
+}
+
+.top-access__table thead th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: bold;
+}
+
+.top-access__table tbody th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: normal;
+}
+
+.top-access__note {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Google Maps */
+.top-access__map iframe {
+    width: 100%;                      /* 親要素の幅に合わせて伸縮 */
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* PC向けスタイル（768px以上） */
+@media (min-width: 768px) {
+    .top-access__content {
+        flex-direction: row;            /* 左右2列並び */
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .top-access__info {
+        width: 50%;
+    }
+
+    .top-access__map {
+        width: 50%;
+    }
+
+    .top-access__map iframe {
+        height: 100%;
+        min-height: 360px;              /* 左側の表の高さに合わせてしっかり表示 */
+    }
+}
