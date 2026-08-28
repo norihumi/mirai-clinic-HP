@@ -320,7 +320,7 @@ ul{
 /* ==========================================
     下層ページ共通パーツ (page)
 ========================================== */
-/* --- メインビジュアル ---*/
+/* --- メインビジュアル (page-mv) ---*/
 .page-mv {
     padding: 80px 0;                    /* 上下の余白（写真を魅せるため広め） */
     text-align: center;
@@ -385,6 +385,35 @@ ul{
 .page-breadcrumb__item[aria-current="page"] {
     color: #333333;
     font-weight: bold;
+}
+
+/* --- 下層ページ各セクションタイトル（page-head / page-title） --- */
+.page-head{
+    margin-bottom : 48px;
+}
+
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+/* 英語（上の青い大文字） */
+.page-title__en {
+    font-size: 28px;
+    font-weight: bold;
+    color: #008080;
+    letter-spacing: 0.12em;
+}
+
+/* 日本語（下のサブタイトル） */
+.page-title__ja {
+    font-size: 15px;
+    font-weight: bold;
+    color: #555555;
+    letter-spacing: 0.05em;
 }
 
 /* ==========================================
@@ -706,4 +735,55 @@ ul{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../img/concept-header.jpg"); /* 使用する画像のパス */
+}
+
+/* ==========================================
+    <CONCEPT>メッセージ (message)
+========================================== */
+.concept-message {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* 強調キャッチコピー */
+.concept-message__catch {
+    font-size: 20px;
+    font-weight: bold;
+    color: #008080;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* 本文エリア（横幅を絞って読みやすくする） */
+.concept-message__body {
+    max-width: 680px;            /* 文章が横に広がりすぎないサイズ */
+    margin: 0 auto;              /* 中央寄せ */
+}
+
+.concept-message__text {
+    font-size: 16px;
+    line-height: 1.8;            /* 行間を広めにして読みやすく */
+    color: #555555;
+    margin-bottom: 24px;
+}
+
+.concept-message__text:last-child {
+    margin-bottom: 0;           /* 最後の段落の余白を消す */
+}
+
+/* --- レスポンシブ（スマホ対応） --- */
+@media (max-width: 768px) {
+    .concept-message {
+        padding: 60px 0;
+    }
+
+    .concept-message__title {
+        font-size: 22px;
+    }
+
+    .concept-message__catch {
+        font-size: 17px;
+        margin-bottom: 32px;
+    }
 }
