@@ -1654,3 +1654,78 @@ ul{
         width: 100%;
     }
 }
+
+/* ==================================================
+  <THANKS>メッセージ (message)
+================================================== */
+.thanks-message {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thanks-message__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.thanks-message__text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.thanks-message__note {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #888;
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.thanks-message__btn_wrap {
+    text-align: center;
+}
+
+.thanks-message__btn {
+    display: inline-block;
+    width: 240px;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.thanks-message__btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    .thanks-message {
+        padding: 32px 16px;
+    }
+
+    .thanks-message__title {
+        font-size: 1.25rem;
+    }
+
+    .thanks-message__btn {
+        width: 100%;
+    }
+}
