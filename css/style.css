@@ -352,6 +352,41 @@ ul{
     color: #ffffff;            /* 白文字で見やすく */
 }
 
+/* --- パンくずリスト（page-breadcrumb） --- */
+.page-breadcrumb {
+    padding: 16px 0;
+    background-color: #f8f9fa; /* 薄いグレーで本文と優しく分離 */
+    font-size: 13px;
+}
+
+.page-breadcrumb__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style : none;
+}
+
+.page-breadcrumb__item a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.page-breadcrumb__item a:hover {
+    text-decoration: underline;
+}
+
+/* 区切り文字（ > ）を自動挿入 */
+.page-breadcrumb__item:not(:last-child)::after {
+    content: ">";
+    margin-left: 8px;
+    color: #999999;
+}
+
+.page-breadcrumb__item[aria-current="page"] {
+    color: #333333;
+    font-weight: bold;
+}
+
 /* ==========================================
     <TOP>メインビジュアル (mv)
 ========================================== */
