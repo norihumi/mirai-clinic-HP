@@ -951,3 +951,71 @@ ul{
         gap: 24px;
     }
 }
+
+/* ==========================================
+    <CONCEPT>クリニック概要・沿革 (about)
+========================================== */
+.concept-about {
+    padding: 80px 0;
+    background-color: #ffffff; /* 白背景で清潔感を出す */
+}
+
+.concept-about__head {
+    margin-bottom: 48px;
+}
+
+/* 概要と沿革を左右2コラム（Flexbox）に並べる */
+.concept-about__content {
+    display: flex;
+    gap: 40px;
+}
+
+.concept-about__block {
+    flex: 1; /* 左右のブロックを半々の幅で広げる */
+}
+
+.concept-about__sub_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #008080;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #008080;
+}
+
+/* 表組み風のレイアウト（DLタグ） */
+.concept-about__item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.concept-about__item dt {
+    width: 120px;
+    font-weight: bold;
+    color: #333333;
+    flex-shrink: 0;
+}
+
+.concept-about__item dd {
+    color: #666666;
+}
+
+/* スマホ対応（768px以下） */
+@media (max-width: 768px) {
+    .concept-about__content {
+        flex-direction: column; /* 左右並びを上下並び（縦並び）に変更 */
+        gap: 40px;
+    }
+
+    .concept-about__item {
+        flex-direction: column; /* 項目名と内容も縦並びにして画面幅に収める */
+        gap: 4px;
+    }
+
+    .concept-about__item dt {
+        width: 100%;
+    }
+}
