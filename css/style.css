@@ -787,3 +787,93 @@ ul{
         margin-bottom: 32px;
     }
 }
+
+/* ==========================================
+    <CONCEPT>挨拶 (greeting)
+========================================== */
+/* --- 院長あいさつ（concept-greeting） --- */
+.concept-greeting {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* 横並びレイアウト（PC） */
+.concept-greeting__wrapper {
+    display: flex;
+    align-items: center;        /* 垂直中央揃え */
+    gap: 40px;                  /* 写真と文章の間の余白 */
+}
+
+/* 写真エリア */
+.concept-greeting__imgbox {
+    flex: 0 0 32%;            /* 写真の幅を固定 */
+    max-width : 360px;
+}
+
+.concept-greeting__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;         /* 角を少し丸くして柔らかい印象に */
+    object-fit: cover;
+}
+
+/* メッセージエリア */
+.concept-greeting__content {
+    flex: 1;                    /* 残りの幅をいっぱいに使う */
+}
+
+.concept-greeting__catch {
+    font-size: 18px;
+    font-weight: bold;
+    color: #008080;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.concept-greeting__text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 16px;
+}
+
+/* 署名 */
+.concept-greeting__name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    text-align: right;          /* 右寄せ */
+    margin-top: 24px;
+}
+
+.concept-greeting__name span {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+/* --- レスポンシブ（スマホ対応） --- */
+@media (max-width: 768px) {
+    .concept-greeting {
+        padding: 60px 0;
+    }
+
+    .concept-greeting__wrapper {
+        flex-direction: column;   /* スマホでは縦並びにする */
+        gap: 24px;
+    }
+
+    .concept-greeting__imgbox {
+        flex: none;
+        width: 100%;
+        max-width: 320px;         /* スマホで大きくなりすぎないよう制限 */
+        margin: 0 auto;           /* 中央寄せ */
+    }
+
+    .concept-greeting__title {
+        font-size: 22px;
+    }
+
+    .concept-greeting__catch {
+        font-size: 16px;
+    }
+}
