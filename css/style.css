@@ -877,3 +877,77 @@ ul{
         font-size: 16px;
     }
 }
+
+/* ==========================================
+   <CONCEPT>特徴 (features)
+========================================== */
+.concept-features {
+    padding: 80px 0;
+    background-color: #f9f9f9;  /* 背景をうっすらグレーにして区切りを意識 */
+}
+
+.concept-features__head {
+    margin-bottom: 48px;
+}
+
+/* 3列並べ（Flexbox） */
+.concept-features__list {
+    display: flex;
+    gap: 30px;
+}
+
+.concept-features__item {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 画像とナンバー */
+.concept-features__img_wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.concept-features__number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #008080;  /* テーマカラー */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.concept-features__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;         /* 画像の比率を保ったままトリミング */
+}
+
+.concept-features__item_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.concept-features__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+/* レスポンシブ（スマホでは1列にする） */
+@media (max-width: 768px) {
+    .concept-features__list {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
