@@ -1145,3 +1145,63 @@ ul{
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../img/service-header.jpg');
 }
+
+/* ==========================================
+    <SERVICE>診療案内ナビ (nav)
+========================================== */
+.service-nav {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.service-nav__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 32px;
+}
+
+.service-nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* スマホでボタンが折り返せるように */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 56px;
+    background-color: #008080;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.service-nav__link:hover {
+    opacity: 0.8;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .service-nav {
+        padding: 40px 0;
+    }
+
+    .service-nav__list{
+        flex-direction : column;
+        gap : 12px;
+    }
+
+    .service-nav__link {
+        width: 100%; /* スマホではボタンを横幅いっぱいに広げて押しやすく */
+    }
+}
