@@ -298,6 +298,25 @@ ul{
     }
 }
 
+/* --- フッター (footer) --- */
+.footer {
+    color: #ffffff;                /* 濃い色で全体を引き締める */
+    background-color: #0f172a;
+    padding: 40px 0 24px;
+    text-align: center;
+}
+
+.footer__logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.footer__copyright {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
 /* ==========================================
     <TOP>メインビジュアル (mv)
 ========================================== */
